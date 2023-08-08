@@ -1,4 +1,4 @@
-# Chia Datalayer Store Watcher
+# Chia Datalayer Update Notifier
 
 This module provides a utility to watch Chia Datalayer stores for changes in their root hashes. When a root hash changes, it signifies that the store has been updated. The module then notifies all registered callbacks of the updated store, enabling quick actions based on these changes.
 
