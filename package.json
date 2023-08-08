@@ -1,0 +1,27 @@
+{
+  "name": "chia-datalayer-update-notifier",
+  "version": "1.0.0",
+  "description": "Watch DataLayer stores and get notified when an update is detected",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelTaylor3D/chia-datalayer-update-notifier.git"
+  },
+  "keywords": [
+    "chia-blockchain"
+  ],
+  "author": "Michael Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelTaylor3D/chia-datalayer-update-notifier/issues"
+  },
+  "homepage": "https://github.com/MichaelTaylor3D/chia-datalayer-update-notifier#readme",
+  "dependencies": {
+    "chia-datalayer-wrapper": "^1.0.3",
+    "chia-root-resolver": "^1.0.0",
+    "node-cache": "^5.1.2"
+  }
+}
