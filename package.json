@@ -1,6 +1,6 @@
 {
   "name": "chia-datalayer-update-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Watch DataLayer stores and get notified when an update is detected",
   "main": "index.js",
   "scripts": {
