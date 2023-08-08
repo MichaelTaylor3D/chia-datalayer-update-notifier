@@ -24,6 +24,11 @@ const getCacheDirectory = () => {
 
 const registerStore = async (storeId) => {
   try {
+    if (memoryCache.has(storeId)) {
+      console.log(`StoreId ${storeId} already exists in memory cache.`);
+      return;
+    }
+
     const datalayer = Datalayer.rpc(config);
     const response = await datalayer.getRoot({ id: storeId });
 
