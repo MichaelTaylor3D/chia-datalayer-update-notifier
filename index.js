@@ -1,5 +1,5 @@
 const NodeCache = require("node-cache");
-const Datalayer = require("chia-datalayer-wrapper");
+const Datalayer = require("chia-datalayer");
 const { getChiaRoot } = require("chia-root-resolver");
 const defaultConfig = require("./defaultConfig");
 const path = require("path");
