@@ -29,7 +29,7 @@ const registerStore = async (storeId) => {
       return;
     }
 
-    const datalayer = Datalayer.rpc(config);
+    const datalayer = new Datalayer(config);
     const response = await datalayer.getRoot({ id: storeId });
 
     if (response && response.success) {
@@ -110,10 +110,10 @@ async function loadRootHashesToCache() {
   }
 }
 
-async function refreshRootHashes(callback) {
+async function refreshRootHashes() {
   const keys = memoryCache.keys();
 
-  const datalayer = Datalayer.rpc(config); // Assuming this is how you instantiate the datalayer with your given config
+  const datalayer = new Datalayer(config);
 
   for (const storeId of keys) {
     try {

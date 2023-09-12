@@ -1,6 +1,6 @@
 {
   "name": "chia-datalayer-update-notifier",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Watch DataLayer stores and get notified when an update is detected",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/MichaelTaylor3D/chia-datalayer-update-notifier#readme",
   "dependencies": {
-    "chia-datalayer": "^1.0.0",
+    "chia-datalayer": "^2.0.0",
     "chia-root-resolver": "^1.0.0",
     "node-cache": "^5.1.2"
   }
