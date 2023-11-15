@@ -14,6 +14,7 @@ let intervalHandle;
 let config = defaultConfig;
 
 function configure(newConfig) {
+  loadRootHashesToCache();
   config = { ...config, ...newConfig };
 }
 
@@ -24,6 +25,7 @@ const getCacheDirectory = () => {
 
 const registerStore = async (storeId) => {
   try {
+    loadRootHashesToCache();
     if (memoryCache.has(storeId)) {
       console.log(`StoreId ${storeId} already exists in memory cache.`);
       return;
@@ -57,6 +59,7 @@ const registerStore = async (storeId) => {
 };
 
 const unregisterStore = async (storeId) => {
+  loadRootHashesToCache();
   // Delete from in-memory cache
   const cacheKey = storeId;
   memoryCache.del(cacheKey);
@@ -111,6 +114,7 @@ async function loadRootHashesToCache() {
 }
 
 async function refreshRootHashes() {
+  loadRootHashesToCache();
   const keys = memoryCache.keys();
 
   const datalayer = new Datalayer(config);
@@ -149,6 +153,7 @@ async function refreshRootHashes() {
 }
 
 function startWatcher(callback) {
+  loadRootHashesToCache();
   if (callbacks.length === 0) {
     intervalHandle = setInterval(() => {
       refreshRootHashes();
@@ -178,6 +183,3 @@ module.exports = {
   startWatcher,
   stopWatcher,
 };
-
-// Load root hashes to cache on startup
-loadRootHashesToCache();
